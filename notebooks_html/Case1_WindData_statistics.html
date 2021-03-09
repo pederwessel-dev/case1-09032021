@@ -15145,9 +15145,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_actual_prod</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_actual_prod</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_dk2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_actual_prod</span><span class="p">][</span><span class="s2">&quot;Wind Production DK2&quot;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="n">col_actual_prod</span><span class="p">][</span><span class="n">df_dk2</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -15167,9 +15166,237 @@ a.anchor-link {
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Wind Production DK1</th>
+      <th>Wind Production DK2</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2016-02-16 13:00:00</th>
+      <td>449.910408</td>
+      <td>0.399388</td>
+    </tr>
+    <tr>
+      <th>2016-02-16 14:00:00</th>
+      <td>573.021711</td>
+      <td>0.399388</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 05:00:00</th>
+      <td>178.526367</td>
+      <td>0.499235</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 06:00:00</th>
+      <td>95.453695</td>
+      <td>0.399388</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 07:00:00</th>
+      <td>74.385986</td>
+      <td>0.499235</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 08:00:00</th>
+      <td>62.504198</td>
+      <td>0.499235</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 09:00:00</th>
+      <td>78.978946</td>
+      <td>0.499235</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 10:00:00</th>
+      <td>89.562724</td>
+      <td>0.299541</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 11:00:00</th>
+      <td>69.892873</td>
+      <td>0.299541</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 12:00:00</th>
+      <td>58.809860</td>
+      <td>0.299541</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 13:00:00</th>
+      <td>42.235265</td>
+      <td>0.499235</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 15:00:00</th>
+      <td>52.419655</td>
+      <td>0.399388</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 16:00:00</th>
+      <td>45.530214</td>
+      <td>0.399388</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 17:00:00</th>
+      <td>61.006493</td>
+      <td>0.399388</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 18:00:00</th>
+      <td>108.433800</td>
+      <td>0.499235</td>
+    </tr>
+    <tr>
+      <th>2016-03-13 16:00:00</th>
+      <td>465.384567</td>
+      <td>0.400848</td>
+    </tr>
+    <tr>
+      <th>2016-03-13 17:00:00</th>
+      <td>469.192623</td>
+      <td>0.300636</td>
+    </tr>
+    <tr>
+      <th>2016-03-13 18:00:00</th>
+      <td>453.759974</td>
+      <td>0.400848</td>
+    </tr>
+    <tr>
+      <th>2016-05-02 08:00:00</th>
+      <td>596.881054</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <th>2016-05-27 10:00:00</th>
+      <td>67.698799</td>
+      <td>0.496326</td>
+    </tr>
+    <tr>
+      <th>2016-06-16 23:00:00</th>
+      <td>3.400210</td>
+      <td>0.100006</td>
+    </tr>
+    <tr>
+      <th>2016-06-17 00:00:00</th>
+      <td>1.700105</td>
+      <td>0.200012</td>
+    </tr>
+    <tr>
+      <th>2016-06-17 01:00:00</th>
+      <td>0.900056</td>
+      <td>0.200012</td>
+    </tr>
+    <tr>
+      <th>2016-06-17 02:00:00</th>
+      <td>0.600037</td>
+      <td>0.200012</td>
+    </tr>
+    <tr>
+      <th>2016-06-17 03:00:00</th>
+      <td>5.800358</td>
+      <td>0.300019</td>
+    </tr>
+    <tr>
+      <th>2016-07-20 06:00:00</th>
+      <td>57.601629</td>
+      <td>0.399318</td>
+    </tr>
+    <tr>
+      <th>2016-07-20 07:00:00</th>
+      <td>67.784240</td>
+      <td>0.499148</td>
+    </tr>
+    <tr>
+      <th>2016-07-23 08:00:00</th>
+      <td>26.155333</td>
+      <td>0.299489</td>
+    </tr>
+    <tr>
+      <th>2016-07-23 09:00:00</th>
+      <td>23.459936</td>
+      <td>0.299489</td>
+    </tr>
+    <tr>
+      <th>2016-08-24 04:00:00</th>
+      <td>71.878792</td>
+      <td>0.399327</td>
+    </tr>
+    <tr>
+      <th>2016-12-18 19:00:00</th>
+      <td>70.432400</td>
+      <td>0.496003</td>
+    </tr>
+    <tr>
+      <th>2016-12-18 20:00:00</th>
+      <td>105.350998</td>
+      <td>0.297602</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_actual_prod</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_actual_prod</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&lt;matplotlib.lines.Line2D at 0x1100f87f0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x115a544f0&gt;]</pre>
 </div>
 
 </div>
@@ -15216,7 +15443,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">col_wind_speed</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -15235,7 +15462,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15407,7 +15634,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">col_wind_speed</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -15426,7 +15653,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -15658,7 +15885,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -15679,13 +15906,13 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&lt;matplotlib.lines.Line2D at 0x1106eb250&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x1161d8700&gt;]</pre>
 </div>
 
 </div>
@@ -15732,7 +15959,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">col_wind_dir</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -15751,7 +15978,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15923,7 +16150,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">col_wind_dir</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -15942,7 +16169,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -16171,10 +16398,543 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Example-of-how-sectorization-may-improve-the-model">Example of how sectorization may improve the model<a class="anchor-link" href="#Example-of-how-sectorization-may-improve-the-model">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_wind</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_wind_dir</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Changing-the-wind-direction-interval-to-check-deviation-from-north">Changing the wind direction interval to check deviation from north<a class="anchor-link" href="#Changing-the-wind-direction-interval-to-check-deviation-from-north">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_wind_180</span> <span class="o">=</span> <span class="n">df_wind</span><span class="p">[</span><span class="n">df_wind</span><span class="p">[</span><span class="s2">&quot;Station1_DD&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">355</span><span class="p">]</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">360</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">180</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">df_wind_180</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Station1_DD</th>
+      <th>Station2_DD</th>
+      <th>Station3_DD</th>
+      <th>Station4_DD</th>
+      <th>Station5_DD</th>
+      <th>Station6_DD</th>
+      <th>Station7_DD</th>
+      <th>Station8_DD</th>
+      <th>Station9_DD</th>
+      <th>Station10_DD</th>
+      <th>Station11_DD</th>
+      <th>Station12_DD</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2016-01-17 06:00:00</th>
+      <td>-3</td>
+      <td>-23.0</td>
+      <td>18.0</td>
+      <td>-27.0</td>
+      <td>-8</td>
+      <td>3</td>
+      <td>-4.0</td>
+      <td>25.0</td>
+      <td>15</td>
+      <td>-11</td>
+      <td>4</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>2016-02-15 21:00:00</th>
+      <td>-4</td>
+      <td>-2.0</td>
+      <td>4.0</td>
+      <td>-12.0</td>
+      <td>-5</td>
+      <td>-6</td>
+      <td>13.0</td>
+      <td>17.0</td>
+      <td>2</td>
+      <td>-8</td>
+      <td>6</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2016-02-28 16:00:00</th>
+      <td>-3</td>
+      <td>16.0</td>
+      <td>-89.0</td>
+      <td>18.0</td>
+      <td>-15</td>
+      <td>-139</td>
+      <td>-167.0</td>
+      <td>-17.0</td>
+      <td>-1</td>
+      <td>-40</td>
+      <td>-152</td>
+      <td>-28</td>
+    </tr>
+    <tr>
+      <th>2016-03-07 05:00:00</th>
+      <td>-2</td>
+      <td>-5.0</td>
+      <td>-120.0</td>
+      <td>-6.0</td>
+      <td>-46</td>
+      <td>-108</td>
+      <td>-63.0</td>
+      <td>-11.0</td>
+      <td>-125</td>
+      <td>-54</td>
+      <td>-118</td>
+      <td>-44</td>
+    </tr>
+    <tr>
+      <th>2016-03-14 16:00:00</th>
+      <td>-4</td>
+      <td>-7.0</td>
+      <td>-43.0</td>
+      <td>10.0</td>
+      <td>-7</td>
+      <td>-32</td>
+      <td>-8.0</td>
+      <td>-21.0</td>
+      <td>-61</td>
+      <td>4</td>
+      <td>-39</td>
+      <td>-27</td>
+    </tr>
+    <tr>
+      <th>2016-03-23 09:00:00</th>
+      <td>-2</td>
+      <td>21.0</td>
+      <td>-43.0</td>
+      <td>2.0</td>
+      <td>-17</td>
+      <td>-31</td>
+      <td>7.0</td>
+      <td>-18.0</td>
+      <td>-58</td>
+      <td>-12</td>
+      <td>-45</td>
+      <td>-21</td>
+    </tr>
+    <tr>
+      <th>2016-03-23 22:00:00</th>
+      <td>-2</td>
+      <td>-27.0</td>
+      <td>-1.0</td>
+      <td>-20.0</td>
+      <td>8</td>
+      <td>15</td>
+      <td>3.0</td>
+      <td>-7.0</td>
+      <td>-1</td>
+      <td>2</td>
+      <td>12</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>2016-04-24 13:00:00</th>
+      <td>-2</td>
+      <td>-1.0</td>
+      <td>-42.0</td>
+      <td>-2.0</td>
+      <td>-26</td>
+      <td>-9</td>
+      <td>-8.0</td>
+      <td>7.0</td>
+      <td>-63</td>
+      <td>-21</td>
+      <td>-30</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2016-04-28 08:00:00</th>
+      <td>-3</td>
+      <td>64.0</td>
+      <td>-61.0</td>
+      <td>26.0</td>
+      <td>-6</td>
+      <td>-34</td>
+      <td>88.0</td>
+      <td>-25.0</td>
+      <td>-68</td>
+      <td>9</td>
+      <td>116</td>
+      <td>-27</td>
+    </tr>
+    <tr>
+      <th>2016-05-14 06:00:00</th>
+      <td>-1</td>
+      <td>5.0</td>
+      <td>-53.0</td>
+      <td>4.0</td>
+      <td>-26</td>
+      <td>-46</td>
+      <td>-13.0</td>
+      <td>-32.0</td>
+      <td>-54</td>
+      <td>-25</td>
+      <td>-41</td>
+      <td>-40</td>
+    </tr>
+    <tr>
+      <th>2016-06-04 06:00:00</th>
+      <td>-4</td>
+      <td>-31.0</td>
+      <td>38.0</td>
+      <td>-18.0</td>
+      <td>-45</td>
+      <td>-4</td>
+      <td>-18.0</td>
+      <td>2.0</td>
+      <td>61</td>
+      <td>-28</td>
+      <td>-45</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>2016-06-08 15:00:00</th>
+      <td>-4</td>
+      <td>41.0</td>
+      <td>-80.0</td>
+      <td>13.0</td>
+      <td>-1</td>
+      <td>-13</td>
+      <td>6.0</td>
+      <td>-38.0</td>
+      <td>-91</td>
+      <td>0</td>
+      <td>-22</td>
+      <td>-49</td>
+    </tr>
+    <tr>
+      <th>2016-06-08 23:00:00</th>
+      <td>-2</td>
+      <td>-10.0</td>
+      <td>21.0</td>
+      <td>-3.0</td>
+      <td>45</td>
+      <td>22</td>
+      <td>40.0</td>
+      <td>-13.0</td>
+      <td>42</td>
+      <td>31</td>
+      <td>103</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>2016-06-09 00:00:00</th>
+      <td>-3</td>
+      <td>-11.0</td>
+      <td>43.0</td>
+      <td>-4.0</td>
+      <td>34</td>
+      <td>21</td>
+      <td>47.0</td>
+      <td>-12.0</td>
+      <td>52</td>
+      <td>26</td>
+      <td>115</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>2016-06-10 16:00:00</th>
+      <td>-2</td>
+      <td>-5.0</td>
+      <td>-16.0</td>
+      <td>17.0</td>
+      <td>5</td>
+      <td>29</td>
+      <td>-18.0</td>
+      <td>-37.0</td>
+      <td>-38</td>
+      <td>0</td>
+      <td>-27</td>
+      <td>-49</td>
+    </tr>
+    <tr>
+      <th>2016-06-25 19:00:00</th>
+      <td>-2</td>
+      <td>-10.0</td>
+      <td>22.0</td>
+      <td>-7.0</td>
+      <td>11</td>
+      <td>10</td>
+      <td>6.0</td>
+      <td>-7.0</td>
+      <td>38</td>
+      <td>12</td>
+      <td>23</td>
+      <td>-9</td>
+    </tr>
+    <tr>
+      <th>2016-07-21 22:00:00</th>
+      <td>-4</td>
+      <td>148.0</td>
+      <td>114.0</td>
+      <td>132.0</td>
+      <td>144</td>
+      <td>134</td>
+      <td>164.0</td>
+      <td>-1.0</td>
+      <td>113</td>
+      <td>148</td>
+      <td>151</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2016-07-22 16:00:00</th>
+      <td>-2</td>
+      <td>180.0</td>
+      <td>123.0</td>
+      <td>48.0</td>
+      <td>144</td>
+      <td>133</td>
+      <td>168.0</td>
+      <td>-2.0</td>
+      <td>85</td>
+      <td>146</td>
+      <td>162</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <th>2016-07-22 17:00:00</th>
+      <td>-4</td>
+      <td>-177.0</td>
+      <td>115.0</td>
+      <td>25.0</td>
+      <td>135</td>
+      <td>127</td>
+      <td>149.0</td>
+      <td>-2.0</td>
+      <td>83</td>
+      <td>137</td>
+      <td>172</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <th>2016-08-16 20:00:00</th>
+      <td>-2</td>
+      <td>-13.0</td>
+      <td>30.0</td>
+      <td>3.0</td>
+      <td>62</td>
+      <td>52</td>
+      <td>-3.0</td>
+      <td>9.0</td>
+      <td>51</td>
+      <td>48</td>
+      <td>-8</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2016-09-19 15:00:00</th>
+      <td>-1</td>
+      <td>-56.0</td>
+      <td>65.0</td>
+      <td>27.0</td>
+      <td>74</td>
+      <td>54</td>
+      <td>-46.0</td>
+      <td>76.0</td>
+      <td>69</td>
+      <td>56</td>
+      <td>44</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <th>2016-11-02 05:00:00</th>
+      <td>-3</td>
+      <td>0.0</td>
+      <td>-62.0</td>
+      <td>7.0</td>
+      <td>-30</td>
+      <td>-54</td>
+      <td>-12.0</td>
+      <td>-36.0</td>
+      <td>-64</td>
+      <td>-31</td>
+      <td>-47</td>
+      <td>-34</td>
+    </tr>
+    <tr>
+      <th>2016-11-27 06:00:00</th>
+      <td>-2</td>
+      <td>4.0</td>
+      <td>-28.0</td>
+      <td>-4.0</td>
+      <td>-14</td>
+      <td>-19</td>
+      <td>-5.0</td>
+      <td>-7.0</td>
+      <td>-35</td>
+      <td>-14</td>
+      <td>-14</td>
+      <td>-13</td>
+    </tr>
+    <tr>
+      <th>2016-12-11 20:00:00</th>
+      <td>-1</td>
+      <td>15.0</td>
+      <td>-67.0</td>
+      <td>9.0</td>
+      <td>-23</td>
+      <td>-51</td>
+      <td>-5.0</td>
+      <td>-39.0</td>
+      <td>-71</td>
+      <td>-18</td>
+      <td>-43</td>
+      <td>-43</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_wind_180</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Date
+2016-01-17 06:00:00    16.130857
+2016-02-15 21:00:00     8.543560
+2016-02-28 16:00:00    67.419256
+2016-03-07 05:00:00    48.306785
+2016-03-14 16:00:00    21.270801
+2016-03-23 09:00:00    23.298296
+2016-03-23 22:00:00    13.207837
+2016-04-24 13:00:00    20.945094
+2016-04-28 08:00:00    57.550702
+2016-05-14 06:00:00    21.357704
+2016-06-04 06:00:00    44.149453
+2016-06-08 15:00:00    38.567139
+2016-06-08 23:00:00    32.127115
+2016-06-09 00:00:00    35.778252
+2016-06-10 16:00:00    23.452563
+2016-06-25 19:00:00    15.106441
+2016-07-21 22:00:00    64.410615
+2016-07-22 16:00:00    62.996573
+2016-07-22 17:00:00    97.923749
+2016-08-16 20:00:00    27.174381
+2016-09-19 15:00:00    46.343497
+2016-11-02 05:00:00    24.152922
+2016-11-27 06:00:00    11.024422
+2016-12-11 20:00:00    28.716351
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -16195,13 +16955,13 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&lt;matplotlib.lines.Line2D at 0x110ff9220&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x1169a5730&gt;]</pre>
 </div>
 
 </div>
